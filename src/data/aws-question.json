@@ -1,0 +1,50 @@
+[
+  {
+    "id": "aws-001",
+    "topic": "AWS",
+    "difficulty": "Senior",
+    "tags": ["AWS", "architecture"],
+    "translations": {
+      "en": {
+        "question": "How would you choose between Lambda, ECS, and EKS for a new service on AWS?",
+        "answer": "Compare workload duration and traffic shape, operational ownership, startup and scaling needs, networking, and cost. Lambda suits short event-driven work with minimal infrastructure management; ECS is a managed choice for container workloads; EKS fits teams that need Kubernetes APIs and control, with greater operational complexity."
+      },
+      "vi": {
+        "question": "Bạn chọn Lambda, ECS hay EKS cho một service mới trên AWS dựa vào những tiêu chí nào?",
+        "answer": "So sánh thời lượng workload và dạng traffic, mức độ vận hành mong muốn, nhu cầu khởi động/mở rộng, network và chi phí. Lambda phù hợp tác vụ ngắn theo event và ít quản lý hạ tầng; ECS là lựa chọn được quản lý cho container; EKS phù hợp khi đội ngũ cần Kubernetes API và quyền kiểm soát cao hơn, đổi lại độ phức tạp vận hành lớn hơn."
+      }
+    }
+  },
+  {
+    "id": "aws-002",
+    "topic": "AWS",
+    "difficulty": "Junior",
+    "tags": ["IAM", "security"],
+    "translations": {
+      "en": {
+        "question": "How do IAM roles differ from long-lived access keys, and when should a workload use a role?",
+        "answer": "A role provides temporary credentials that a trusted identity can assume, while long-lived access keys remain valid until rotated or revoked. Prefer roles for workloads such as EC2, Lambda, or CI jobs, and grant only the permissions required for their tasks."
+      },
+      "vi": {
+        "question": "IAM role khác access key dài hạn thế nào và khi nào workload nên dùng role?",
+        "answer": "Role cấp credential tạm thời cho identity đáng tin cậy assume, còn access key dài hạn có hiệu lực cho đến khi được rotate hoặc revoke. Nên dùng role cho workload như EC2, Lambda hoặc CI job và chỉ cấp quyền cần thiết cho tác vụ."
+      }
+    }
+  },
+  {
+    "id": "aws-003",
+    "topic": "AWS",
+    "difficulty": "Middle",
+    "tags": ["S3", "CloudFront"],
+    "translations": {
+      "en": {
+        "question": "How would you serve private files from S3 through CloudFront without making the bucket public?",
+        "answer": "Keep S3 block-public-access enabled, configure CloudFront Origin Access Control, and grant the distribution access through a bucket policy. For private per-user content, add signed URLs or signed cookies and keep authorization checks outside the public bucket."
+      },
+      "vi": {
+        "question": "Làm sao phân phối file riêng tư từ S3 qua CloudFront mà không public bucket?",
+        "answer": "Bật block-public-access trên S3, cấu hình CloudFront Origin Access Control và cấp quyền cho distribution bằng bucket policy. Với nội dung riêng theo người dùng, dùng signed URL hoặc signed cookie và giữ bước kiểm tra quyền ở ngoài public bucket."
+      }
+    }
+  }
+]

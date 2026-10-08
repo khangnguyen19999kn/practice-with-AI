@@ -1,0 +1,50 @@
+[
+  {
+    "id": "node-001",
+    "topic": "Node.js",
+    "difficulty": "Middle",
+    "tags": ["Node.js", "concurrency"],
+    "translations": {
+      "en": {
+        "question": "How does Node.js handle concurrent I/O despite running JavaScript on a single thread?",
+        "answer": "JavaScript runs on the event loop while asynchronous I/O is delegated to the operating system or libuv's worker pool. When an operation completes, its callback is queued for the event loop, allowing the process to serve other work without blocking on I/O."
+      },
+      "vi": {
+        "question": "Node.js xử lý I/O đồng thời như thế nào dù JavaScript chạy trên một luồng?",
+        "answer": "JavaScript chạy trên event loop, còn I/O bất đồng bộ được giao cho hệ điều hành hoặc worker pool của libuv. Khi thao tác hoàn tất, callback được đưa vào hàng đợi để event loop xử lý, nhờ vậy tiến trình vẫn phục vụ công việc khác mà không chờ I/O theo cách blocking."
+      }
+    }
+  },
+  {
+    "id": "node-002",
+    "topic": "Node.js",
+    "difficulty": "Junior",
+    "tags": ["streams", "backpressure"],
+    "translations": {
+      "en": {
+        "question": "What is backpressure in Node.js streams, and how should a producer handle it?",
+        "answer": "Backpressure occurs when a writable consumes data slower than a readable produces it. A producer should respect write() returning false and wait for the drain event, or use pipeline(), so buffers do not grow without bound and memory remains controlled."
+      },
+      "vi": {
+        "question": "Backpressure trong Node.js stream là gì và producer nên xử lý ra sao?",
+        "answer": "Backpressure xảy ra khi writable tiêu thụ dữ liệu chậm hơn readable tạo ra. Producer nên tôn trọng việc write() trả về false và đợi sự kiện drain, hoặc dùng pipeline(), để buffer không tăng vô hạn và bộ nhớ vẫn được kiểm soát."
+      }
+    }
+  },
+  {
+    "id": "node-003",
+    "topic": "Node.js",
+    "difficulty": "Senior",
+    "tags": ["event loop", "observability"],
+    "translations": {
+      "en": {
+        "question": "How would you diagnose high event-loop delay in a production Node.js service?",
+        "answer": "Measure event-loop delay and utilization, correlate them with CPU, latency, and traffic metrics, then capture a CPU profile or flame graph. Look for synchronous work, expensive serialization, or hot loops; move suitable CPU-heavy work to worker threads and verify the change under representative load."
+      },
+      "vi": {
+        "question": "Bạn chẩn đoán event-loop delay cao trong Node.js production như thế nào?",
+        "answer": "Đo event-loop delay và utilization, đối chiếu với CPU, latency và traffic, sau đó capture CPU profile hoặc flame graph. Tìm synchronous work, serialization nặng hoặc vòng lặp nóng; chuyển phần CPU-heavy phù hợp sang worker thread và kiểm chứng dưới tải đại diện."
+      }
+    }
+  }
+]

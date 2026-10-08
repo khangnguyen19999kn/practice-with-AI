@@ -1,0 +1,50 @@
+[
+  {
+    "id": "sql-001",
+    "topic": "SQL / Databases",
+    "difficulty": "Junior",
+    "tags": ["SQL", "indexing"],
+    "translations": {
+      "en": {
+        "question": "How can a composite database index help a query, and why does column order matter?",
+        "answer": "A composite index can speed up filters and ordering that use its leading columns, reducing rows the database must scan. Column order matters because many engines use the leftmost prefix of the index; confirm the benefit with the query plan and account for added write and storage costs."
+      },
+      "vi": {
+        "question": "Composite index giúp truy vấn như thế nào và vì sao thứ tự cột lại quan trọng?",
+        "answer": "Composite index có thể tăng tốc bộ lọc và sắp xếp dùng các cột đứng đầu, giảm số dòng database phải quét. Thứ tự cột quan trọng vì nhiều engine tận dụng leftmost prefix của index; nên kiểm tra query plan và cân nhắc chi phí ghi cũng như dung lượng lưu trữ tăng thêm."
+      }
+    }
+  },
+  {
+    "id": "sql-002",
+    "topic": "SQL / Databases",
+    "difficulty": "Fresher",
+    "tags": ["SQL", "joins"],
+    "translations": {
+      "en": {
+        "question": "What is the difference between INNER JOIN and LEFT JOIN?",
+        "answer": "INNER JOIN returns rows with matching values on both sides. LEFT JOIN keeps every row from the left table and adds matching right-side data, using NULL when no right-side match exists."
+      },
+      "vi": {
+        "question": "INNER JOIN khác LEFT JOIN như thế nào?",
+        "answer": "INNER JOIN chỉ trả về các dòng khớp ở cả hai phía. LEFT JOIN giữ mọi dòng của bảng bên trái và thêm dữ liệu khớp từ bảng bên phải; nếu không có dòng khớp thì các cột bên phải là NULL."
+      }
+    }
+  },
+  {
+    "id": "sql-003",
+    "topic": "SQL / Databases",
+    "difficulty": "Middle",
+    "tags": ["transactions", "isolation"],
+    "translations": {
+      "en": {
+        "question": "What problems do transaction isolation levels address, and what trade-off does stronger isolation introduce?",
+        "answer": "Isolation levels control anomalies such as dirty reads, non-repeatable reads, and phantoms. Stronger isolation gives more predictable results but can reduce concurrency through locking or retries. Choose the weakest level that still preserves the application's correctness requirements."
+      },
+      "vi": {
+        "question": "Các mức transaction isolation xử lý vấn đề gì và isolation cao hơn đánh đổi điều gì?",
+        "answer": "Isolation level kiểm soát các anomaly như dirty read, non-repeatable read và phantom. Isolation cao hơn cho kết quả dễ dự đoán hơn nhưng có thể giảm concurrency do lock hoặc retry. Hãy chọn mức thấp nhất vẫn đáp ứng yêu cầu đúng đắn của ứng dụng."
+      }
+    }
+  }
+]

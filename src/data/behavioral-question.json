@@ -1,0 +1,50 @@
+[
+  {
+    "id": "fe-007",
+    "topic": "Behavioral",
+    "difficulty": "Middle",
+    "tags": ["STAR", "communication"],
+    "translations": {
+      "en": {
+        "question": "Tell me about a time you received difficult feedback. How did you respond, and what did you change?",
+        "answer": "Use the STAR framework: explain the situation and your responsibility, describe the specific actions you took after receiving the feedback, then share a verifiable result and what you applied afterward. Avoid blaming others or saying only that you tried harder."
+      },
+      "vi": {
+        "question": "Kể về một lần bạn nhận được feedback khó nghe. Bạn đã phản hồi và thay đổi điều gì?",
+        "answer": "Dùng khung STAR: nêu bối cảnh và trách nhiệm, giải thích hành động cụ thể sau khi tiếp nhận feedback, rồi kết thúc bằng kết quả có thể kiểm chứng và điều bạn áp dụng về sau. Tránh đổ lỗi hoặc chỉ nói chung chung rằng mình đã cố gắng."
+      }
+    }
+  },
+  {
+    "id": "behavioral-002",
+    "topic": "Behavioral",
+    "difficulty": "Junior",
+    "tags": ["STAR", "teamwork"],
+    "translations": {
+      "en": {
+        "question": "Tell me about a disagreement with a teammate and how you worked through it.",
+        "answer": "Use a specific example: explain the shared goal and disagreement, how you listened and compared evidence or trade-offs, what decision or experiment you agreed on, and the outcome. Show respect for the teammate and take responsibility for your part."
+      },
+      "vi": {
+        "question": "Kể về một lần bạn bất đồng với đồng đội và cách hai bên giải quyết.",
+        "answer": "Dùng ví dụ cụ thể: nêu mục tiêu chung và điểm bất đồng, cách bạn lắng nghe và so sánh bằng chứng hoặc đánh đổi, quyết định/thử nghiệm đã thống nhất và kết quả. Thể hiện sự tôn trọng đồng đội và nhận trách nhiệm phần của mình."
+      }
+    }
+  },
+  {
+    "id": "behavioral-003",
+    "topic": "Behavioral",
+    "difficulty": "Senior",
+    "tags": ["ownership", "incident response"],
+    "translations": {
+      "en": {
+        "question": "Describe a production incident you owned. How did you balance mitigation, communication, and the long-term fix?",
+        "answer": "Cover the impact and your role, how you stabilized the system first, how you kept stakeholders informed, and how you followed through with root-cause analysis and preventive actions. Distinguish confirmed facts from assumptions and explain what you learned."
+      },
+      "vi": {
+        "question": "Kể về sự cố production bạn phụ trách. Bạn cân bằng giảm thiểu ảnh hưởng, giao tiếp và sửa lỗi lâu dài ra sao?",
+        "answer": "Nêu ảnh hưởng và vai trò của bạn, cách ổn định hệ thống trước, cập nhật cho các bên liên quan và theo sát phân tích nguyên nhân gốc cùng biện pháp phòng ngừa. Phân biệt dữ kiện đã xác nhận với giả định và nói rõ bài học rút ra."
+      }
+    }
+  }
+]

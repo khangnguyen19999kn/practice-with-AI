@@ -1,0 +1,50 @@
+[
+  {
+    "id": "fe-008",
+    "topic": "System design",
+    "difficulty": "Senior",
+    "tags": ["Accessibility", "architecture"],
+    "translations": {
+      "en": {
+        "question": "How would you design a scalable and accessible autocomplete component?",
+        "answer": "Separate the input, query state, suggestions, and selection state; debounce requests, cancel stale requests, and support loading, error, and empty states. Use combobox and listbox semantics, keyboard focus management, aria-activedescendant, and limit or virtualize results for large lists."
+      },
+      "vi": {
+        "question": "Bạn sẽ thiết kế một component autocomplete có khả năng mở rộng và truy cập tốt như thế nào?",
+        "answer": "Tách input, trạng thái truy vấn, danh sách gợi ý và trạng thái chọn; debounce truy vấn, hủy request cũ và hỗ trợ loading/error/empty. Dùng combobox/listbox semantics, quản lý focus bằng bàn phím, aria-activedescendant, và giới hạn kết quả hoặc virtualize khi danh sách lớn."
+      }
+    }
+  },
+  {
+    "id": "system-design-002",
+    "topic": "System design",
+    "difficulty": "Middle",
+    "tags": ["rate limiting", "distributed systems"],
+    "translations": {
+      "en": {
+        "question": "How would you design a rate limiter for an API used by multiple application instances?",
+        "answer": "Clarify limits and fairness requirements, then choose a strategy such as token bucket or sliding window. Store shared counters in a low-latency centralized system or use a carefully designed distributed approach; define keying, expiration, atomic updates, failure behavior, and observability."
+      },
+      "vi": {
+        "question": "Bạn thiết kế rate limiter cho API chạy trên nhiều application instance như thế nào?",
+        "answer": "Làm rõ giới hạn và yêu cầu công bằng, sau đó chọn chiến lược như token bucket hoặc sliding window. Lưu counter dùng chung trong hệ thống latency thấp hoặc thiết kế cách phân tán phù hợp; xác định key, expiration, cập nhật atomic, cách xử lý khi lỗi và observability."
+      }
+    }
+  },
+  {
+    "id": "system-design-003",
+    "topic": "System design",
+    "difficulty": "Senior",
+    "tags": ["architecture", "reliability"],
+    "translations": {
+      "en": {
+        "question": "How would you make a fan-out notification service reliable without overwhelming downstream consumers?",
+        "answer": "Decouple producers and consumers with a durable queue, partition work, and apply bounded concurrency with backpressure. Make delivery idempotent, retry transient failures with backoff, route poison messages to a dead-letter queue, and monitor lag, delivery latency, and failure rates."
+      },
+      "vi": {
+        "question": "Bạn thiết kế notification service fan-out đáng tin cậy mà không làm quá tải consumer downstream thế nào?",
+        "answer": "Tách producer và consumer bằng durable queue, phân vùng công việc và giới hạn concurrency có backpressure. Đảm bảo delivery idempotent, retry lỗi tạm thời với backoff, chuyển poison message vào dead-letter queue và theo dõi lag, delivery latency cùng tỷ lệ lỗi."
+      }
+    }
+  }
+]

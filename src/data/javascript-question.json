@@ -1,0 +1,338 @@
+[
+  {
+    "id": "fe-003",
+    "topic": "JavaScript",
+    "difficulty": "Middle",
+    "tags": ["Event loop", "async"],
+    "translations": {
+      "en": {
+        "question": "In what order does the event loop process microtasks and macrotasks?",
+        "answer": "After the call stack is empty, JavaScript drains the current microtask queue, such as Promise callbacks, before taking the next macrotask, such as setTimeout. The browser may render between task cycles according to its schedule."
+      },
+      "vi": {
+        "question": "Event loop xử lý microtask và macrotask theo thứ tự nào?",
+        "answer": "Sau khi call stack rỗng, JavaScript xử lý hết microtask hiện có, ví dụ Promise callbacks, trước khi lấy macrotask tiếp theo như setTimeout. Trình duyệt có thể render giữa các vòng task theo lịch của nó."
+      }
+    }
+  },
+  {
+    "id": "javascript-002",
+    "topic": "JavaScript",
+    "difficulty": "Fresher",
+    "tags": ["closures", "scope"],
+    "translations": {
+      "en": {
+        "question": "What is a closure in JavaScript?",
+        "answer": "A closure is a function together with access to variables from its lexical scope, even after the outer function has returned. Closures are useful for callbacks and encapsulated state, but retained references can also keep data in memory longer than expected."
+      },
+      "vi": {
+        "question": "Closure trong JavaScript là gì?",
+        "answer": "Closure là một function cùng quyền truy cập vào các biến thuộc lexical scope của nó, kể cả khi hàm bên ngoài đã kết thúc. Closure hữu ích cho callback và đóng gói state, nhưng các tham chiếu được giữ lại cũng có thể khiến dữ liệu tồn tại trong bộ nhớ lâu hơn dự kiến."
+      }
+    }
+  },
+  {
+    "id": "javascript-003",
+    "topic": "JavaScript",
+    "difficulty": "Middle",
+    "tags": ["promises", "async"],
+    "translations": {
+      "en": {
+        "question": "How do Promise.all and Promise.allSettled differ?",
+        "answer": "Promise.all fulfills when every input fulfills and rejects as soon as one input rejects. Promise.allSettled waits for every input and returns each outcome as fulfilled or rejected, which is useful when every result matters even if some operations fail."
+      },
+      "vi": {
+        "question": "Promise.all và Promise.allSettled khác nhau thế nào?",
+        "answer": "Promise.all hoàn tất khi mọi promise thành công và reject ngay khi một promise thất bại. Promise.allSettled đợi tất cả hoàn tất rồi trả trạng thái fulfilled hoặc rejected của từng promise, phù hợp khi cần xem đủ kết quả dù một số thao tác lỗi."
+      }
+    }
+  },
+  {
+    "id": "javascript-004",
+    "topic": "JavaScript",
+    "difficulty": "Fresher",
+    "tags": ["variables", "scope"],
+    "translations": {
+      "en": {
+        "question": "How do var, let, and const differ in JavaScript?",
+        "answer": "var is function-scoped and can be redeclared; let and const are block-scoped and cannot be redeclared in the same scope. let can be reassigned, while const cannot be reassigned, though objects declared with const can still have their properties changed."
+      },
+      "vi": {
+        "question": "var, let và const khác nhau như thế nào trong JavaScript?",
+        "answer": "var có function scope và có thể khai báo lại; let và const có block scope, không thể khai báo lại trong cùng scope. let có thể gán lại, còn const không thể gán lại biến, nhưng object khai báo bằng const vẫn có thể đổi thuộc tính."
+      }
+    }
+  },
+  {
+    "id": "javascript-005",
+    "topic": "JavaScript",
+    "difficulty": "Fresher",
+    "tags": ["equality", "coercion"],
+    "translations": {
+      "en": {
+        "question": "What is the difference between == and === in JavaScript?",
+        "answer": "The == operator allows type coercion before comparison, while === compares both type and value without coercion. Prefer === for predictable comparisons, and use == only when the coercion behavior is deliberate and understood."
+      },
+      "vi": {
+        "question": "Toán tử == và === trong JavaScript khác nhau thế nào?",
+        "answer": "== có thể ép kiểu trước khi so sánh, còn === so sánh cả kiểu lẫn giá trị mà không ép kiểu. Nên ưu tiên === để kết quả dễ đoán; chỉ dùng == khi chủ đích dựa trên quy tắc ép kiểu và đã hiểu rõ hệ quả."
+      }
+    }
+  },
+  {
+    "id": "javascript-006",
+    "topic": "JavaScript",
+    "difficulty": "Junior",
+    "tags": ["scope", "closures"],
+    "translations": {
+      "en": {
+        "question": "What is lexical scope, and how does it determine which variables a function can access?",
+        "answer": "Lexical scope is determined by where code is written. A function can access variables in its own scope and enclosing scopes, but not variables declared only inside a nested scope; this lookup behavior also enables closures."
+      },
+      "vi": {
+        "question": "Lexical scope là gì và nó quyết định function truy cập biến như thế nào?",
+        "answer": "Lexical scope được quyết định bởi vị trí code được viết. Một function truy cập được biến trong scope của nó và các scope bao quanh, nhưng không truy cập được biến chỉ khai báo bên trong scope con; cơ chế tìm kiếm này cũng tạo nền tảng cho closure."
+      }
+    }
+  },
+  {
+    "id": "javascript-007",
+    "topic": "JavaScript",
+    "difficulty": "Junior",
+    "tags": ["hoisting", "temporal dead zone"],
+    "translations": {
+      "en": {
+        "question": "What is hoisting, and how does it differ for var, let, const, and function declarations?",
+        "answer": "Declarations are processed before their scope executes, but they are not all initialized the same way. var is initialized to undefined; let and const are inaccessible in the temporal dead zone until their declaration; function declarations can generally be called before their source position."
+      },
+      "vi": {
+        "question": "Hoisting là gì và var, let, const, function declaration được xử lý khác nhau ra sao?",
+        "answer": "Các khai báo được xử lý trước khi scope chạy, nhưng không phải tất cả đều được khởi tạo giống nhau. var được gán undefined; let và const không thể truy cập trong temporal dead zone trước dòng khai báo; function declaration thường có thể được gọi trước vị trí xuất hiện trong source."
+      }
+    }
+  },
+  {
+    "id": "javascript-008",
+    "topic": "JavaScript",
+    "difficulty": "Middle",
+    "tags": ["async", "promises"],
+    "translations": {
+      "en": {
+        "question": "How do async/await and Promises relate, and when is each style useful?",
+        "answer": "An async function always returns a Promise, and await is syntax for writing Promise-based sequencing in a more linear style. Use async/await for readable sequential flows and try/catch; use Promise combinators such as all or allSettled when coordinating independent operations."
+      },
+      "vi": {
+        "question": "async/await liên hệ với Promise như thế nào và khi nào nên dùng từng cách?",
+        "answer": "Hàm async luôn trả về Promise, còn await là cú pháp giúp viết luồng xử lý Promise tuần tự theo kiểu dễ đọc hơn. Dùng async/await cho luồng tuần tự và try/catch; dùng các hàm như all hoặc allSettled để phối hợp các tác vụ độc lập."
+      }
+    }
+  },
+  {
+    "id": "javascript-009",
+    "topic": "JavaScript",
+    "difficulty": "Junior",
+    "tags": ["callbacks", "control flow"],
+    "translations": {
+      "en": {
+        "question": "What is callback hell, and how can Promises or async/await improve the code?",
+        "answer": "Callback hell is deeply nested callback-based asynchronous code that is hard to read, handle errors in, and maintain. Promises allow chaining and centralized error handling; async/await makes sequencing clearer. Neither removes the need to handle failures or control concurrency."
+      },
+      "vi": {
+        "question": "Callback hell là gì và Promise hoặc async/await giúp cải thiện code ra sao?",
+        "answer": "Callback hell là code bất đồng bộ lồng nhiều callback, khó đọc, xử lý lỗi và bảo trì. Promise cho phép chain và gom xử lý lỗi; async/await giúp luồng tuần tự rõ ràng hơn. Cả hai vẫn cần xử lý failure và kiểm soát concurrency."
+      }
+    }
+  },
+  {
+    "id": "javascript-010",
+    "topic": "JavaScript",
+    "difficulty": "Middle",
+    "tags": ["promises", "composition"],
+    "translations": {
+      "en": {
+        "question": "What do developers mean by Promise hell, and how can nested Promise chains be simplified?",
+        "answer": "Promise hell usually refers to deeply nested then callbacks or chains that return unclear values and scatter error handling. Return each Promise from then, flatten the chain, extract named functions, and use async/await for sequential logic; use Promise.all for truly independent work."
+      },
+      "vi": {
+        "question": "Promise hell thường chỉ tình huống nào và làm sao đơn giản hóa Promise chain lồng nhau?",
+        "answer": "Promise hell thường chỉ các then callback lồng sâu hoặc chain trả về giá trị không rõ ràng và xử lý lỗi rải rác. Hãy return Promise ở mỗi then để làm phẳng chain, tách function có tên, dùng async/await cho luồng tuần tự và Promise.all cho công việc độc lập."
+      }
+    }
+  },
+  {
+    "id": "javascript-011",
+    "topic": "JavaScript",
+    "difficulty": "Senior",
+    "tags": ["event loop", "I/O concurrency"],
+    "translations": {
+      "en": {
+        "question": "If JavaScript is single-threaded, how can a server handle many I/O requests concurrently?",
+        "answer": "JavaScript callbacks run on an event loop, while the runtime delegates I/O to the operating system or a worker pool. When I/O completes, its continuation is queued, so the process can make progress on other requests without blocking a thread per connection. CPU-heavy JavaScript still blocks the event loop unless offloaded."
+      },
+      "vi": {
+        "question": "Nếu JavaScript chạy một luồng, server xử lý nhiều request I/O đồng thời bằng cách nào?",
+        "answer": "Callback JavaScript chạy trên event loop, còn runtime giao I/O cho hệ điều hành hoặc worker pool. Khi I/O hoàn tất, phần tiếp tục được đưa vào hàng đợi để process xử lý request khác mà không cần chặn một thread cho mỗi kết nối. JavaScript nặng CPU vẫn chặn event loop nếu không được chuyển sang worker."
+      }
+    }
+  },
+  {
+    "id": "javascript-012",
+    "topic": "JavaScript",
+    "difficulty": "Senior",
+    "tags": ["threads", "workers"],
+    "translations": {
+      "en": {
+        "question": "What are the trade-offs between JavaScript's event-loop model and using multiple worker threads?",
+        "answer": "An event loop with asynchronous I/O is efficient for many I/O-bound tasks and avoids shared-memory coordination. Worker threads can run CPU-heavy work in parallel, but add message-passing, lifecycle, memory, and synchronization costs. Use them when profiling shows CPU work is blocking responsiveness or throughput."
+      },
+      "vi": {
+        "question": "Đánh đổi giữa event-loop model của JavaScript và việc dùng nhiều worker thread là gì?",
+        "answer": "Event loop kết hợp I/O bất đồng bộ hiệu quả cho nhiều tác vụ chờ I/O và tránh phối hợp shared memory. Worker thread chạy song song tác vụ nặng CPU nhưng tăng chi phí truyền message, vòng đời, bộ nhớ và đồng bộ. Chỉ nên dùng khi profiling cho thấy CPU work đang chặn độ phản hồi hoặc throughput."
+      }
+    }
+  },
+  {
+    "id": "javascript-013",
+    "topic": "JavaScript",
+    "difficulty": "Fresher",
+    "tags": ["this", "arrow functions"],
+    "translations": {
+      "en": {
+        "question": "How does this behave differently in a regular function and an arrow function?",
+        "answer": "A regular function's this is determined by how it is called, and call, apply, or bind can set it. An arrow function captures this lexically from its surrounding scope and cannot be rebound, which makes it useful for callbacks but unsuitable as a method that needs its own receiver."
+      },
+      "vi": {
+        "question": "this hoạt động khác nhau thế nào trong function thường và arrow function?",
+        "answer": "this của function thường phụ thuộc vào cách gọi hàm và có thể được đặt bằng call, apply hoặc bind. Arrow function lấy this theo lexical scope bên ngoài và không thể bind lại; nó tiện cho callback nhưng không phù hợp làm method cần receiver riêng."
+      }
+    }
+  },
+  {
+    "id": "javascript-014",
+    "topic": "JavaScript",
+    "difficulty": "Fresher",
+    "tags": ["primitives", "references"],
+    "translations": {
+      "en": {
+        "question": "What is copied when you assign a primitive versus an object to another variable?",
+        "answer": "Assignment copies the primitive value, so changing one variable does not change the other. For objects, assignment copies the reference, so both variables can point to the same object; mutating it through either reference is visible through both."
+      },
+      "vi": {
+        "question": "Khi gán primitive và object sang biến khác thì dữ liệu nào được sao chép?",
+        "answer": "Phép gán primitive sao chép giá trị nên đổi biến này không làm đổi biến kia. Với object, phép gán sao chép reference nên hai biến có thể cùng trỏ đến một object; sửa object qua biến nào cũng thấy thay đổi qua biến còn lại."
+      }
+    }
+  },
+  {
+    "id": "javascript-015",
+    "topic": "JavaScript",
+    "difficulty": "Junior",
+    "tags": ["prototypes", "classes"],
+    "translations": {
+      "en": {
+        "question": "How does the prototype chain work, and what does the class syntax add?",
+        "answer": "When a property is not found on an object, JavaScript looks up its prototype chain until it finds the property or reaches null. Class syntax provides a clearer way to define constructors, methods, and inheritance, but it still uses prototypes under the hood."
+      },
+      "vi": {
+        "question": "Prototype chain hoạt động ra sao và cú pháp class bổ sung điều gì?",
+        "answer": "Khi không tìm thấy property trên object, JavaScript tiếp tục tra prototype chain cho đến khi tìm thấy hoặc gặp null. Cú pháp class giúp khai báo constructor, method và inheritance rõ ràng hơn, nhưng bên dưới vẫn dựa trên prototype."
+      }
+    }
+  },
+  {
+    "id": "javascript-016",
+    "topic": "JavaScript",
+    "difficulty": "Junior",
+    "tags": ["immutability", "copying"],
+    "translations": {
+      "en": {
+        "question": "What is the difference between a shallow copy and a deep copy in JavaScript?",
+        "answer": "A shallow copy creates a new outer object but keeps references to nested objects, so nested mutations can affect both copies. A deep copy duplicates nested data as well; choose a safe supported method such as structuredClone when the value types it supports are sufficient."
+      },
+      "vi": {
+        "question": "Shallow copy và deep copy trong JavaScript khác nhau thế nào?",
+        "answer": "Shallow copy tạo object ngoài mới nhưng vẫn giữ reference tới object lồng bên trong, nên sửa dữ liệu lồng nhau có thể ảnh hưởng cả hai bản. Deep copy sao chép cả dữ liệu lồng nhau; có thể dùng structuredClone nếu kiểu dữ liệu cần sao chép được hỗ trợ."
+      }
+    }
+  },
+  {
+    "id": "javascript-017",
+    "topic": "JavaScript",
+    "difficulty": "Middle",
+    "tags": ["garbage collection", "memory"],
+    "translations": {
+      "en": {
+        "question": "How does garbage collection determine which JavaScript objects can be reclaimed?",
+        "answer": "Modern engines generally use reachability: objects reachable from roots such as the current stack and global references remain live, while unreachable objects may be reclaimed. Exact algorithms and timing are implementation details, so code should release unnecessary references rather than depend on when collection runs."
+      },
+      "vi": {
+        "question": "Garbage Collector xác định object JavaScript nào có thể được thu hồi như thế nào?",
+        "answer": "Các engine hiện đại thường dựa trên khả năng truy cập: object còn đi tới được từ GC root như stack hiện tại hoặc tham chiếu global thì còn sống; object không còn reachable có thể được thu hồi. Thuật toán và thời điểm cụ thể phụ thuộc engine, vì vậy code nên bỏ tham chiếu không cần thiết thay vì dựa vào lúc GC chạy."
+      }
+    }
+  },
+  {
+    "id": "javascript-018",
+    "topic": "JavaScript",
+    "difficulty": "Middle",
+    "tags": ["memory leaks", "debugging"],
+    "translations": {
+      "en": {
+        "question": "What common patterns cause memory leaks in a browser application, and how would you investigate one?",
+        "answer": "Common causes include forgotten event listeners or timers, detached DOM nodes retained by references, unbounded caches, and subscriptions that are never cleaned up. Compare heap snapshots or allocation timelines, inspect retaining paths, and verify that cleanup releases the references."
+      },
+      "vi": {
+        "question": "Những pattern nào thường gây memory leak trong ứng dụng browser và bạn điều tra ra sao?",
+        "answer": "Nguyên nhân thường gặp gồm quên gỡ event listener hoặc timer, detached DOM node vẫn bị reference giữ lại, cache không giới hạn và subscription không được cleanup. So sánh heap snapshot hoặc allocation timeline, xem retaining path rồi xác nhận cleanup đã giải phóng reference."
+      }
+    }
+  },
+  {
+    "id": "javascript-019",
+    "topic": "JavaScript",
+    "difficulty": "Middle",
+    "tags": ["AbortController", "fetch"],
+    "translations": {
+      "en": {
+        "question": "How can AbortController prevent stale search requests from updating the UI?",
+        "answer": "Create an AbortController for each request, pass its signal to fetch, and abort the previous controller when a new query starts or the component is disposed. Handle AbortError separately from real failures; aborting the client request does not guarantee the server stopped processing it."
+      },
+      "vi": {
+        "question": "AbortController giúp request search cũ không cập nhật UI như thế nào?",
+        "answer": "Tạo AbortController cho mỗi request, truyền signal vào fetch và abort controller cũ khi query mới bắt đầu hoặc component bị dispose. Xử lý AbortError riêng với lỗi thật; hủy request phía client không đảm bảo server đã dừng xử lý."
+      }
+    }
+  },
+  {
+    "id": "javascript-020",
+    "topic": "JavaScript",
+    "difficulty": "Senior",
+    "tags": ["Web Workers", "structured clone"],
+    "translations": {
+      "en": {
+        "question": "How are objects transferred to a Web Worker, and when would you use Transferable objects?",
+        "answer": "postMessage normally uses the structured clone algorithm to copy supported data. For large buffers, Transferable objects such as ArrayBuffer can transfer ownership without copying, detaching them from the sender. SharedArrayBuffer can share memory but requires careful synchronization with Atomics."
+      },
+      "vi": {
+        "question": "Object được truyền sang Web Worker ra sao và khi nào nên dùng Transferable?",
+        "answer": "postMessage thường dùng structured clone để sao chép dữ liệu được hỗ trợ. Với buffer lớn, Transferable như ArrayBuffer có thể chuyển quyền sở hữu mà không sao chép và làm buffer phía gửi bị detach. SharedArrayBuffer chia sẻ bộ nhớ nhưng cần đồng bộ cẩn thận bằng Atomics."
+      }
+    }
+  },
+  {
+    "id": "javascript-021",
+    "topic": "JavaScript",
+    "difficulty": "Senior",
+    "tags": ["ES modules", "CommonJS", "tree shaking"],
+    "translations": {
+      "en": {
+        "question": "How do ES modules and CommonJS differ, and why can module format affect tree-shaking?",
+        "answer": "ES modules use static import and export declarations that tooling can analyze before execution; CommonJS typically loads modules with runtime require calls. Static module structure makes tree-shaking more reliable, though package side effects, export shape, and bundler configuration also affect what can be removed."
+      },
+      "vi": {
+        "question": "ES modules và CommonJS khác nhau thế nào, và module format ảnh hưởng tree-shaking ra sao?",
+        "answer": "ES modules dùng khai báo import/export tĩnh để tooling phân tích trước khi chạy; CommonJS thường nạp module bằng lời gọi require lúc runtime. Cấu trúc tĩnh giúp tree-shaking đáng tin cậy hơn, dù side effect của package, dạng export và cấu hình bundler cũng ảnh hưởng phần code bị loại bỏ."
+      }
+    }
+  }
+]

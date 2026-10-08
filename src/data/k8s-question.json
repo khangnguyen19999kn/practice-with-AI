@@ -1,0 +1,50 @@
+[
+  {
+    "id": "k8s-001",
+    "topic": "K8s",
+    "difficulty": "Middle",
+    "tags": ["Kubernetes", "health checks"],
+    "translations": {
+      "en": {
+        "question": "What is the difference between readiness, liveness, and startup probes in Kubernetes?",
+        "answer": "Readiness controls whether a pod receives traffic, liveness determines whether a container should be restarted, and startup gives slow-starting applications time to initialize before the other probes take effect. Each should measure the condition it is intended to protect."
+      },
+      "vi": {
+        "question": "Readiness, liveness và startup probe trong Kubernetes khác nhau như thế nào?",
+        "answer": "Readiness quyết định pod có nhận traffic hay không; liveness xác định container có cần restart; startup cho ứng dụng khởi động chậm đủ thời gian khởi tạo trước khi các probe khác có hiệu lực. Mỗi probe nên đo đúng điều kiện mà nó bảo vệ."
+      }
+    }
+  },
+  {
+    "id": "k8s-002",
+    "topic": "K8s",
+    "difficulty": "Junior",
+    "tags": ["workloads", "deployments"],
+    "translations": {
+      "en": {
+        "question": "What does a Kubernetes Deployment manage, and how does a rolling update work?",
+        "answer": "A Deployment manages ReplicaSets and keeps the requested number of interchangeable pods running. During a rolling update, it gradually creates pods from the new template and scales down old pods according to its rollout strategy, while readiness checks help prevent routing traffic to unready pods."
+      },
+      "vi": {
+        "question": "Kubernetes Deployment quản lý gì và rolling update hoạt động thế nào?",
+        "answer": "Deployment quản lý ReplicaSet và duy trì số pod có thể thay thế cho nhau theo yêu cầu. Khi rolling update, nó tạo dần pod từ template mới và giảm pod cũ theo rollout strategy; readiness check giúp tránh chuyển traffic tới pod chưa sẵn sàng."
+      }
+    }
+  },
+  {
+    "id": "k8s-003",
+    "topic": "K8s",
+    "difficulty": "Senior",
+    "tags": ["resources", "scheduling"],
+    "translations": {
+      "en": {
+        "question": "How do CPU and memory requests and limits affect Kubernetes scheduling and runtime behavior?",
+        "answer": "Requests are used by the scheduler to place pods and reserve capacity. CPU limits throttle usage, while exceeding a memory limit can cause the container to be OOM-killed. Set values from observed workload behavior and monitor throttling, restarts, and pending pods."
+      },
+      "vi": {
+        "question": "CPU/memory request và limit ảnh hưởng thế nào đến scheduling và lúc chạy trong Kubernetes?",
+        "answer": "Request được scheduler dùng để chọn node và dành capacity. CPU limit có thể gây throttling, còn vượt memory limit có thể khiến container bị OOM-kill. Nên đặt giá trị dựa trên workload thực tế và theo dõi throttling, restart cùng pod pending."
+      }
+    }
+  }
+]

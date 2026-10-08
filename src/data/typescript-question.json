@@ -1,0 +1,50 @@
+[
+  {
+    "id": "fe-004",
+    "topic": "TypeScript",
+    "difficulty": "Fresher",
+    "tags": ["Types", "fundamentals"],
+    "translations": {
+      "en": {
+        "question": "When would you use an interface versus a type in TypeScript?",
+        "answer": "Both describe type shapes. An interface works well for object contracts that may be extended or merged through declarations; a type is more flexible for unions, intersections, tuples, and type transformations. Consistency within the project matters most."
+      },
+      "vi": {
+        "question": "Khi nào bạn dùng interface và khi nào dùng type trong TypeScript?",
+        "answer": "Cả hai đều mô tả cấu trúc kiểu. interface phù hợp với object contract cần mở rộng hoặc declaration merging; type linh hoạt hơn cho union, intersection, tuple và các phép biến đổi kiểu. Nên ưu tiên tính nhất quán trong dự án."
+      }
+    }
+  },
+  {
+    "id": "typescript-002",
+    "topic": "TypeScript",
+    "difficulty": "Junior",
+    "tags": ["unknown", "type safety"],
+    "translations": {
+      "en": {
+        "question": "When should you use unknown instead of any in TypeScript?",
+        "answer": "Use unknown when a value's type is not yet known but you still want type safety. You must narrow or validate an unknown value before using it, while any disables most checking and can allow unsafe operations to pass compilation."
+      },
+      "vi": {
+        "question": "Khi nào nên dùng unknown thay vì any trong TypeScript?",
+        "answer": "Dùng unknown khi chưa biết kiểu của giá trị nhưng vẫn muốn giữ an toàn kiểu. Bạn phải thu hẹp hoặc kiểm tra unknown trước khi sử dụng; còn any tắt phần lớn kiểm tra và có thể để thao tác không an toàn lọt qua lúc biên dịch."
+      }
+    }
+  },
+  {
+    "id": "typescript-003",
+    "topic": "TypeScript",
+    "difficulty": "Middle",
+    "tags": ["union types", "narrowing"],
+    "translations": {
+      "en": {
+        "question": "How does a discriminated union help model API states?",
+        "answer": "A discriminated union gives each variant a shared literal property, such as status, with a distinct value. Checking that property narrows the type so each state exposes only valid fields, making loading, success, and error cases explicit and exhaustively checkable."
+      },
+      "vi": {
+        "question": "Discriminated union giúp mô hình hóa trạng thái API như thế nào?",
+        "answer": "Discriminated union dùng một thuộc tính literal chung, chẳng hạn status, có giá trị khác nhau ở mỗi nhánh. Kiểm tra thuộc tính này giúp thu hẹp type để mỗi trạng thái chỉ có các field hợp lệ, đồng thời mô tả rõ loading/success/error và hỗ trợ kiểm tra exhaustiveness."
+      }
+    }
+  }
+]

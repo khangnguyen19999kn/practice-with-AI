@@ -1,0 +1,82 @@
+[
+  {
+    "id": "fe-005",
+    "topic": "Web fundamentals",
+    "difficulty": "Junior",
+    "tags": ["Browser", "rendering"],
+    "translations": {
+      "en": {
+        "question": "Explain how a browser renders a page after receiving its HTML and CSS.",
+        "answer": "The browser parses HTML into the DOM and CSS into the CSSOM, combines them into a render tree, then performs layout, paint, and layer compositing. JavaScript can interrupt or trigger some of these steps again."
+      },
+      "vi": {
+        "question": "Hãy giải thích cách trình duyệt hiển thị một trang web sau khi nhận HTML và CSS.",
+        "answer": "Trình duyệt phân tích HTML để tạo DOM, phân tích CSS để tạo CSSOM, kết hợp thành render tree, tính layout rồi paint và composite các layer. JavaScript có thể làm gián đoạn hoặc kích hoạt lại một số bước này."
+      }
+    }
+  },
+  {
+    "id": "web-002",
+    "topic": "Web fundamentals",
+    "difficulty": "Fresher",
+    "tags": ["DOM events", "bubbling"],
+    "translations": {
+      "en": {
+        "question": "What is event bubbling, and how is event delegation useful?",
+        "answer": "In event bubbling, an event propagates from its target through ancestor elements. Event delegation attaches one handler to a shared ancestor and checks the event target, which can reduce listeners for dynamic or large lists."
+      },
+      "vi": {
+        "question": "Event bubbling là gì và event delegation có ích như thế nào?",
+        "answer": "Khi bubbling, event lan từ phần tử đích lên các phần tử cha. Event delegation đặt một handler trên phần tử cha chung rồi kiểm tra event target, giúp giảm số listener cho danh sách lớn hoặc nội dung sinh động."
+      }
+    }
+  },
+  {
+    "id": "web-003",
+    "topic": "Web fundamentals",
+    "difficulty": "Junior",
+    "tags": ["CORS", "security"],
+    "translations": {
+      "en": {
+        "question": "What does CORS protect, and what role does a preflight request play?",
+        "answer": "CORS is a browser-enforced policy that controls whether frontend code may read a cross-origin response; it is not a replacement for server-side authorization. For some non-simple requests, the browser first sends an OPTIONS preflight so the server can allow or deny the method and headers."
+      },
+      "vi": {
+        "question": "CORS bảo vệ điều gì và preflight request có vai trò ra sao?",
+        "answer": "CORS là chính sách do trình duyệt thực thi để kiểm soát frontend có được đọc response cross-origin hay không; nó không thay thế authorization phía server. Với một số request không đơn giản, trình duyệt gửi OPTIONS preflight trước để server cho phép hoặc từ chối method và header."
+      }
+    }
+  },
+  {
+    "id": "web-004",
+    "topic": "Web fundamentals",
+    "difficulty": "Junior",
+    "tags": ["browser rendering", "reflow", "repaint"],
+    "translations": {
+      "en": {
+        "question": "What is the difference between reflow and repaint, and what kinds of changes can trigger each?",
+        "answer": "Reflow, or layout, recalculates element geometry and can cause affected areas to repaint. Repaint updates visual pixels without necessarily changing layout, such as changing a color. Compositor-only properties such as transform or opacity may avoid both, but browsers can optimize and batch work, so verify with a performance trace."
+      },
+      "vi": {
+        "question": "Reflow khác repaint thế nào, và thay đổi nào thường kích hoạt từng loại?",
+        "answer": "Reflow, hay layout, tính lại kích thước/vị trí phần tử và có thể kéo theo repaint vùng bị ảnh hưởng. Repaint cập nhật pixel hiển thị mà không nhất thiết đổi layout, chẳng hạn đổi màu. Một số thuộc tính compositor như transform hoặc opacity có thể tránh cả hai; trình duyệt còn tối ưu và gộp công việc nên hãy kiểm chứng bằng performance trace."
+      }
+    }
+  },
+  {
+    "id": "web-005",
+    "topic": "Web fundamentals",
+    "difficulty": "Junior",
+    "tags": ["storage", "cookies", "security"],
+    "translations": {
+      "en": {
+        "question": "How do localStorage, sessionStorage, and cookies differ in lifetime, scope, and request behavior?",
+        "answer": "localStorage is scoped to an origin and persists until cleared; sessionStorage is scoped to an origin and a tab session and is cleared when that session ends. Both store strings and are not automatically attached to requests. Cookies have expiry and path/domain rules and are sent with matching requests; Secure, SameSite, and HttpOnly affect security, so avoid storing secrets in Web Storage."
+      },
+      "vi": {
+        "question": "localStorage, sessionStorage và cookie khác nhau thế nào về thời hạn, phạm vi và request?",
+        "answer": "localStorage thuộc một origin và tồn tại đến khi bị xóa; sessionStorage thuộc origin và phiên của tab, thường mất khi phiên tab kết thúc. Cả hai lưu chuỗi và không tự gửi kèm request. Cookie có hạn dùng cùng quy tắc path/domain và được gửi theo request phù hợp; Secure, SameSite, HttpOnly ảnh hưởng bảo mật, vì vậy tránh lưu secret trong Web Storage."
+      }
+    }
+  }
+]

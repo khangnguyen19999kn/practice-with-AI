@@ -1,0 +1,50 @@
+[
+  {
+    "id": "gcp-001",
+    "topic": "GCP",
+    "difficulty": "Junior",
+    "tags": ["GCP", "Cloud Run"],
+    "translations": {
+      "en": {
+        "question": "When would you choose Cloud Run over GKE for a containerized application on GCP?",
+        "answer": "Cloud Run is a strong fit for stateless request- or event-driven containers when the team wants managed scaling and low cluster overhead. GKE is preferable when the workload needs Kubernetes-level control, custom scheduling, a service mesh, or a broader cluster platform."
+      },
+      "vi": {
+        "question": "Khi nào bạn chọn Cloud Run thay vì GKE cho ứng dụng container trên GCP?",
+        "answer": "Cloud Run phù hợp container stateless theo request hoặc event khi đội ngũ muốn tự động scale và giảm công vận hành cluster. GKE phù hợp hơn khi workload cần quyền kiểm soát Kubernetes, scheduling tùy chỉnh, service mesh hoặc một nền tảng cluster rộng hơn."
+      }
+    }
+  },
+  {
+    "id": "gcp-002",
+    "topic": "GCP",
+    "difficulty": "Middle",
+    "tags": ["IAM", "service accounts"],
+    "translations": {
+      "en": {
+        "question": "How should a GCP workload authenticate to another Google Cloud service?",
+        "answer": "Use an attached service account or workload identity with short-lived credentials rather than downloading a service-account key. Grant least-privilege IAM roles to that identity and audit which principals can impersonate it."
+      },
+      "vi": {
+        "question": "Workload trên GCP nên xác thực với Google Cloud service khác thế nào?",
+        "answer": "Dùng service account gắn với workload hoặc workload identity cùng credential ngắn hạn thay vì tải key của service account. Cấp IAM role theo least privilege cho identity đó và audit các principal có thể impersonate nó."
+      }
+    }
+  },
+  {
+    "id": "gcp-003",
+    "topic": "GCP",
+    "difficulty": "Senior",
+    "tags": ["Pub/Sub", "messaging"],
+    "translations": {
+      "en": {
+        "question": "How do you design a Pub/Sub consumer to safely handle at-least-once message delivery?",
+        "answer": "Make processing idempotent, acknowledge only after durable success, and use bounded retries with dead-letter handling for poison messages. Track delivery attempts and processing latency, and protect downstream systems with concurrency limits or flow control."
+      },
+      "vi": {
+        "question": "Thiết kế Pub/Sub consumer an toàn với cơ chế giao message at-least-once thế nào?",
+        "answer": "Làm xử lý idempotent, chỉ acknowledge sau khi lưu thành công bền vững, và dùng retry có giới hạn cùng dead-letter handling cho poison message. Theo dõi số lần giao và latency; bảo vệ hệ thống downstream bằng giới hạn concurrency hoặc flow control."
+      }
+    }
+  }
+]

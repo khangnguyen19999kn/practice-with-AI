@@ -1,0 +1,114 @@
+[
+  {
+    "id": "fe-006",
+    "topic": "Performance",
+    "difficulty": "Senior",
+    "tags": ["Core Web Vitals", "LCP"],
+    "translations": {
+      "en": {
+        "question": "How would you investigate and improve a page's Largest Contentful Paint?",
+        "answer": "Measure LCP with real-user data and tools such as Lighthouse or the Performance panel, identify the LCP element, and break down time spent on TTFB, resource loading, and render delay. Then address the cause: improve caching or server response, preload the hero image, optimize image size and format, reduce render-blocking CSS or JavaScript, or avoid lazy-loading the LCP element."
+      },
+      "vi": {
+        "question": "Bạn sẽ điều tra và cải thiện Largest Contentful Paint của một trang như thế nào?",
+        "answer": "Đo LCP bằng dữ liệu thực tế và công cụ như Lighthouse hoặc Performance panel, xác định phần tử LCP và phân rã thời gian chờ TTFB, tải tài nguyên, và render delay. Sau đó ưu tiên cải thiện nguyên nhân: cache/server, preload ảnh hero, tối ưu kích thước và định dạng ảnh, giảm CSS/JS chặn render, hoặc tránh lazy-load phần tử LCP."
+      }
+    }
+  },
+  {
+    "id": "performance-002",
+    "topic": "Performance",
+    "difficulty": "Junior",
+    "tags": ["code splitting", "bundle size"],
+    "translations": {
+      "en": {
+        "question": "How can route-based code splitting improve a web application's initial load?",
+        "answer": "It lets the browser download only the JavaScript needed for the initial route, reducing parse and execution work. Split at meaningful route or feature boundaries, preload likely next routes when appropriate, and avoid creating many tiny chunks that add request overhead."
+      },
+      "vi": {
+        "question": "Code splitting theo route giúp cải thiện lần tải đầu của web app như thế nào?",
+        "answer": "Cách này giúp trình duyệt chỉ tải JavaScript cần cho route đầu, giảm công parse và thực thi. Nên chia ở ranh giới route hoặc feature hợp lý, preload route có khả năng được mở tiếp theo khi phù hợp, và tránh tạo quá nhiều chunk nhỏ gây overhead request."
+      }
+    }
+  },
+  {
+    "id": "performance-003",
+    "topic": "Performance",
+    "difficulty": "Senior",
+    "tags": ["profiling", "INP"],
+    "translations": {
+      "en": {
+        "question": "How would you investigate a poor Interaction to Next Paint score on a data-heavy page?",
+        "answer": "Use field data and a performance trace to identify the slow interaction and its input, processing, and presentation delays. Look for long main-thread tasks, expensive rendering, or layout work; then reduce synchronous work, split tasks, optimize the affected component, and verify the improvement with representative interactions."
+      },
+      "vi": {
+        "question": "Bạn điều tra INP kém trên một trang nhiều dữ liệu như thế nào?",
+        "answer": "Dùng field data và performance trace để xác định tương tác chậm cùng độ trễ input, xử lý và hiển thị. Tìm long task trên main thread, render tốn kém hoặc layout nặng; sau đó giảm synchronous work, chia nhỏ task, tối ưu component liên quan và kiểm chứng bằng tương tác đại diện."
+      }
+    }
+  },
+  {
+    "id": "performance-004",
+    "topic": "Performance",
+    "difficulty": "Senior",
+    "tags": ["optimization", "Core Web Vitals"],
+    "translations": {
+      "en": {
+        "question": "How would you build a measurement-first checklist to improve front-end performance across a page?",
+        "answer": "Start with field data and a trace, identify the bottleneck, and track LCP, INP, and CLS. Then target the cause: optimize and correctly prioritize images and fonts, reduce initial JavaScript with splitting and tree-shaking, avoid long main-thread tasks and unnecessary renders, reduce layout shifts and oversized DOM, and use caching or request deduplication where appropriate. Re-measure on representative devices and networks; apply memoization only when profiling shows it helps."
+      },
+      "vi": {
+        "question": "Bạn lập checklist tối ưu performance FE theo hướng đo lường trước như thế nào?",
+        "answer": "Bắt đầu bằng field data và performance trace để tìm bottleneck, theo dõi LCP, INP và CLS. Sau đó xử lý đúng nguyên nhân: tối ưu và ưu tiên ảnh/font hợp lý, giảm JavaScript ban đầu bằng code splitting và tree-shaking, tránh long task và render không cần thiết, hạn chế layout shift/DOM quá lớn, dùng cache hoặc gộp request khi phù hợp. Đo lại trên thiết bị và mạng đại diện; chỉ memo hóa khi profiler cho thấy có ích."
+      }
+    }
+  },
+  {
+    "id": "performance-005",
+    "topic": "Performance",
+    "difficulty": "Senior",
+    "tags": ["large lists", "virtualization", "INP"],
+    "translations": {
+      "en": {
+        "question": "A page renders tens of thousands of rows and scrolling or typing in its filter feels laggy. How would you investigate and fix it?",
+        "answer": "Profile the interaction and identify whether DOM size, row rendering, filtering, or data loading is the bottleneck. Render only visible rows with list virtualization and a small overscan, use stable keys and predictable row sizing, and debounce or defer expensive filtering. Consider pagination or server-side filtering when fetching all records is itself costly. Preserve keyboard navigation and screen-reader semantics, then verify scrolling and INP on representative devices."
+      },
+      "vi": {
+        "question": "Một trang render hàng chục nghìn dòng, cuộn danh sách hoặc gõ vào ô lọc bị giật. Bạn điều tra và xử lý thế nào?",
+        "answer": "Profile thao tác để xác định nút thắt nằm ở kích thước DOM, render từng dòng, lọc dữ liệu hay tải dữ liệu. Dùng virtualization để chỉ render các dòng đang thấy cùng overscan nhỏ, dùng key ổn định và kích thước dòng dễ dự đoán; debounce hoặc defer phần lọc tốn kém. Cân nhắc pagination hoặc lọc phía server nếu tải toàn bộ dữ liệu đã là vấn đề. Giữ hỗ trợ bàn phím và screen reader, rồi kiểm chứng cuộn/INP trên thiết bị đại diện."
+      }
+    }
+  },
+  {
+    "id": "performance-006",
+    "topic": "Performance",
+    "difficulty": "Middle",
+    "tags": ["animation", "requestAnimationFrame"],
+    "translations": {
+      "en": {
+        "question": "An animation driven by a timer looks choppy. How can requestAnimationFrame help, and what else would you check?",
+        "answer": "requestAnimationFrame schedules a visual update before the browser's next repaint and provides a timestamp for frame-rate-independent progress, unlike a fixed setInterval cadence. It does not make expensive work faster: keep each callback short, cancel it when finished, and prefer compositor-friendly transform or opacity over repeated layout-affecting changes."
+      },
+      "vi": {
+        "question": "Animation chạy bằng timer bị giật. requestAnimationFrame giúp gì và cần kiểm tra thêm điều gì?",
+        "answer": "requestAnimationFrame lên lịch cập nhật hình ảnh trước lần repaint tiếp theo và cung cấp timestamp để tính tiến độ độc lập với frame rate, khác với nhịp cố định của setInterval. Nó không làm tác vụ nặng tự nhanh hơn: giữ callback ngắn, hủy khi hoàn tất và ưu tiên transform/opacity thay vì liên tục đổi thuộc tính gây layout."
+      }
+    }
+  },
+  {
+    "id": "performance-007",
+    "topic": "Performance",
+    "difficulty": "Junior",
+    "tags": ["IntersectionObserver", "lazy loading"],
+    "translations": {
+      "en": {
+        "question": "How would you start an animation only when a section enters the viewport, and why use IntersectionObserver?",
+        "answer": "Observe the section with IntersectionObserver and start the animation when isIntersecting meets the chosen threshold; disconnect or unobserve it when no longer needed. It avoids running per-scroll geometry checks on the main thread, supports root and rootMargin options, and can also trigger lazy loading before content becomes visible."
+      },
+      "vi": {
+        "question": "Bạn chỉ chạy animation khi một section đi vào viewport như thế nào, và vì sao dùng IntersectionObserver?",
+        "answer": "Quan sát section bằng IntersectionObserver rồi bắt đầu animation khi isIntersecting đạt threshold đã chọn; disconnect hoặc unobserve khi không cần nữa. API này tránh phải tự kiểm tra hình học ở mỗi sự kiện scroll trên main thread, hỗ trợ root/rootMargin và cũng có thể kích hoạt lazy loading trước khi nội dung xuất hiện."
+      }
+    }
+  }
+]

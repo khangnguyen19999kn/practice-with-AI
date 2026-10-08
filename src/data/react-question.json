@@ -1,0 +1,354 @@
+[
+  {
+    "id": "fe-001",
+    "topic": "React",
+    "difficulty": "Fresher",
+    "tags": ["React", "fundamentals"],
+    "translations": {
+      "en": {
+        "question": "In React, how are props and state different?",
+        "answer": "Props are data passed from a parent and should not be changed by the receiving component. State is data managed within a component; when it changes, React re-renders the relevant UI."
+      },
+      "vi": {
+        "question": "Trong React, props và state khác nhau như thế nào?",
+        "answer": "Props là dữ liệu component nhận từ component cha và không nên bị component con thay đổi. State là dữ liệu nội bộ do component quản lý; khi state thay đổi, React sẽ render lại giao diện liên quan."
+      }
+    }
+  },
+  {
+    "id": "fe-002",
+    "topic": "React",
+    "difficulty": "Junior",
+    "tags": ["Hooks", "lifecycle"],
+    "translations": {
+      "en": {
+        "question": "When does useEffect run, and how does the dependency array affect it?",
+        "answer": "An effect runs after React commits the UI. Without a dependency array it runs after every render; an empty array runs after the initial mount; and an array of dependencies runs again when one changes. Cleanup runs before the next effect and on unmount."
+      },
+      "vi": {
+        "question": "useEffect chạy vào thời điểm nào và dependency array ảnh hưởng ra sao?",
+        "answer": "Effect chạy sau khi React commit giao diện. Không truyền dependency array thì chạy sau mỗi lần render; mảng rỗng chỉ chạy sau lần mount đầu; mảng có dependency chạy lại khi một dependency thay đổi. Hàm cleanup chạy trước lần effect kế tiếp và khi unmount."
+      }
+    }
+  },
+  {
+    "id": "react-003",
+    "topic": "React",
+    "difficulty": "Fresher",
+    "tags": ["JSX", "rendering"],
+    "translations": {
+      "en": {
+        "question": "What happens when a React component returns JSX?",
+        "answer": "JSX is syntax that React tooling transforms into element descriptions. React uses those descriptions to reconcile the component tree and update the necessary parts of the UI; JSX itself is not HTML and does not directly manipulate the DOM."
+      },
+      "vi": {
+        "question": "Điều gì xảy ra khi một component React trả về JSX?",
+        "answer": "JSX là cú pháp được công cụ React chuyển thành các mô tả element. React dùng chúng để đối chiếu cây component và cập nhật những phần cần thiết của giao diện; JSX không phải HTML và cũng không trực tiếp thao tác DOM."
+      }
+    }
+  },
+  {
+    "id": "react-004",
+    "topic": "React",
+    "difficulty": "Junior",
+    "tags": ["keys", "lists"],
+    "translations": {
+      "en": {
+        "question": "Why does React need stable keys when rendering a list?",
+        "answer": "Keys let React match items between renders so it can preserve the right component state and apply minimal updates. Prefer stable IDs from the data; array indexes can cause incorrect state reuse when items are inserted, removed, or reordered."
+      },
+      "vi": {
+        "question": "Vì sao React cần key ổn định khi render danh sách?",
+        "answer": "Key giúp React ghép đúng các item giữa những lần render để giữ state component chính xác và cập nhật tối thiểu. Nên dùng ID ổn định từ dữ liệu; dùng index có thể khiến state bị gán nhầm khi chèn, xóa hoặc sắp xếp lại item."
+      }
+    }
+  },
+  {
+    "id": "react-005",
+    "topic": "React",
+    "difficulty": "Middle",
+    "tags": ["Context", "performance"],
+    "translations": {
+      "en": {
+        "question": "How can frequently changing Context values cause performance issues, and how would you address them?",
+        "answer": "When a provider value changes, consumers of that context are notified and may re-render even if they use only part of the value. Split contexts by update frequency, keep provider values stable where appropriate, and consider a state library or external store with selectors for high-frequency shared state."
+      },
+      "vi": {
+        "question": "Context thay đổi thường xuyên có thể gây vấn đề hiệu năng gì và bạn xử lý thế nào?",
+        "answer": "Khi giá trị provider thay đổi, các consumer của context được thông báo và có thể render lại dù chỉ dùng một phần giá trị. Có thể tách context theo tần suất cập nhật, giữ provider value ổn định khi phù hợp, hoặc dùng state library/external store có selector cho state chia sẻ cập nhật liên tục."
+      }
+    }
+  },
+  {
+    "id": "react-006",
+    "topic": "React",
+    "difficulty": "Middle",
+    "tags": ["effects", "data fetching"],
+    "translations": {
+      "en": {
+        "question": "What problems can occur when fetching data directly inside useEffect?",
+        "answer": "Direct effect fetching can cause race conditions, waterfalls, duplicate requests, and missing cache or server-rendering support. If using it, handle cancellation or stale responses and loading/error states; for larger apps, prefer the framework's data APIs or a query library."
+      },
+      "vi": {
+        "question": "Có thể gặp vấn đề gì khi gọi API trực tiếp trong useEffect?",
+        "answer": "Gọi API trực tiếp trong effect có thể gây race condition, request nối tiếp, gọi trùng và thiếu cache hoặc hỗ trợ server rendering. Nếu vẫn dùng, cần xử lý hủy request/kết quả cũ cùng trạng thái loading/error; ứng dụng lớn nên cân nhắc API dữ liệu của framework hoặc query library."
+      }
+    }
+  },
+  {
+    "id": "react-007",
+    "topic": "React",
+    "difficulty": "Senior",
+    "tags": ["concurrent rendering", "transitions"],
+    "translations": {
+      "en": {
+        "question": "When would you use a React transition for a state update?",
+        "answer": "Use a transition for non-urgent updates, such as rendering filtered results after typing, so urgent interactions remain responsive. Keep controlled input updates urgent, mark the expensive follow-up update as a transition, and show pending feedback when useful."
+      },
+      "vi": {
+        "question": "Khi nào bạn nên dùng transition cho state update trong React?",
+        "answer": "Dùng transition cho cập nhật không khẩn cấp, chẳng hạn render kết quả lọc sau khi nhập, để tương tác quan trọng vẫn phản hồi nhanh. Giữ cập nhật input ở mức khẩn cấp, đánh dấu phần cập nhật tốn kém tiếp theo là transition và hiển thị trạng thái đang xử lý khi cần."
+      }
+    }
+  },
+  {
+    "id": "react-008",
+    "topic": "React",
+    "difficulty": "Senior",
+    "tags": ["architecture", "state management"],
+    "translations": {
+      "en": {
+        "question": "How do you decide whether state belongs locally, in Context, or in an external store?",
+        "answer": "Keep state local when only one component subtree needs it. Use Context for relatively stable values needed across a subtree. Choose an external store when state is shared broadly, changes frequently, needs selectors or middleware, or benefits from explicit update and debugging tools."
+      },
+      "vi": {
+        "question": "Bạn quyết định đặt state ở component, Context hay external store dựa trên tiêu chí nào?",
+        "answer": "Giữ state cục bộ khi chỉ một nhánh component cần dùng. Dùng Context cho giá trị tương đối ổn định cần chia sẻ trong một nhánh. Chọn external store khi state được chia sẻ rộng, thay đổi thường xuyên, cần selector/middleware hoặc cần công cụ cập nhật và debug rõ ràng."
+      }
+    }
+  },
+  {
+    "id": "react-009",
+    "topic": "React",
+    "difficulty": "Senior",
+    "tags": ["memoization", "React Compiler"],
+    "translations": {
+      "en": {
+        "question": "How do memo, useMemo, and useCallback differ, and what changes when the React Compiler is enabled?",
+        "answer": "memo can skip rendering a component when its props are unchanged; useMemo caches a calculated value; useCallback caches a function reference. When configured and enabled, React Compiler can add many memoization optimizations automatically, so manual memoization should be based on measured need rather than added everywhere."
+      },
+      "vi": {
+        "question": "memo, useMemo và useCallback khác nhau thế nào, và React Compiler thay đổi điều gì?",
+        "answer": "memo có thể bỏ qua render component khi props không đổi; useMemo cache kết quả tính toán; useCallback cache tham chiếu function. Khi được cấu hình và bật, React Compiler có thể tự áp dụng nhiều tối ưu memoization, vì vậy chỉ nên thêm memo thủ công khi có nhu cầu được đo đạc thay vì dùng khắp nơi."
+      }
+    }
+  },
+  {
+    "id": "react-010",
+    "topic": "React",
+    "difficulty": "Senior",
+    "tags": ["Fiber", "scheduling"],
+    "translations": {
+      "en": {
+        "question": "How does React Fiber help keep rendering responsive, and what work does it not eliminate?",
+        "answer": "Fiber represents rendering work as units that React can prioritize, pause, and resume, allowing urgent updates to be handled ahead of less urgent work. The DOM commit still has to apply changes, and Fiber does not make expensive component calculations free; profiling and reducing unnecessary work still matter."
+      },
+      "vi": {
+        "question": "React Fiber giúp giữ render phản hồi nhanh như thế nào, và nó không loại bỏ loại công việc nào?",
+        "answer": "Fiber biểu diễn công việc render thành các đơn vị để React ưu tiên, tạm dừng và tiếp tục, nhờ đó update khẩn cấp có thể được xử lý trước. Bước commit vẫn phải áp dụng thay đổi vào DOM và Fiber không làm phép tính component tốn kém trở nên miễn phí; vẫn cần profiling và giảm công việc không cần thiết."
+      }
+    }
+  },
+  {
+    "id": "react-011",
+    "topic": "React",
+    "difficulty": "Middle",
+    "tags": ["reconciliation", "keys"],
+    "translations": {
+      "en": {
+        "question": "What is reconciliation in React, and how do element type and key affect whether state is preserved?",
+        "answer": "Reconciliation compares the new element tree with the previous one to determine updates. React generally preserves state when component type and position remain compatible; changing a key or type tells React the element is different, so the old subtree is unmounted and state resets."
+      },
+      "vi": {
+        "question": "Reconciliation trong React là gì, và element type cùng key ảnh hưởng việc giữ state ra sao?",
+        "answer": "Reconciliation đối chiếu cây element mới với lần trước để xác định thay đổi. React thường giữ state khi type và vị trí component tương thích; đổi key hoặc type báo cho React đây là element khác, khiến subtree cũ bị unmount và state được tạo lại."
+      }
+    }
+  },
+  {
+    "id": "react-012",
+    "topic": "React",
+    "difficulty": "Junior",
+    "tags": ["custom hooks", "abstraction"],
+    "translations": {
+      "en": {
+        "question": "When should reusable logic be a custom Hook rather than a plain helper function?",
+        "answer": "Use a custom Hook when the logic composes React state, effects, or other Hooks and must follow the Rules of Hooks. Use a plain helper for a pure calculation or transformation that does not need React lifecycle or state."
+      },
+      "vi": {
+        "question": "Khi nào nên tách logic dùng lại thành custom Hook thay vì helper function thông thường?",
+        "answer": "Dùng custom Hook khi logic kết hợp state, effect hoặc Hook khác của React và cần tuân theo Rules of Hooks. Dùng helper function cho phép tính hoặc biến đổi thuần không cần lifecycle hay state của React."
+      }
+    }
+  },
+  {
+    "id": "react-013",
+    "topic": "React",
+    "difficulty": "Middle",
+    "tags": ["React 19", "actions"],
+    "translations": {
+      "en": {
+        "question": "How can useActionState and useFormStatus simplify an asynchronous form in React 19?",
+        "answer": "useActionState connects an Action to state such as the result and pending status, while useFormStatus lets a component inside a form read submission status. Together they can simplify pending and result UI; validate inputs and handle errors explicitly, and note that useFormStatus must be called within a descendant of the form."
+      },
+      "vi": {
+        "question": "useActionState và useFormStatus giúp đơn giản hóa form bất đồng bộ trong React 19 như thế nào?",
+        "answer": "useActionState kết nối Action với state như kết quả và trạng thái pending; useFormStatus cho component nằm bên trong form đọc trạng thái submit. Chúng giúp đơn giản hóa UI loading/kết quả; vẫn cần validate input, xử lý lỗi rõ ràng và lưu ý useFormStatus phải được gọi từ component con của form."
+      }
+    }
+  },
+  {
+    "id": "react-014",
+    "topic": "React",
+    "difficulty": "Middle",
+    "tags": ["React 19", "optimistic UI"],
+    "translations": {
+      "en": {
+        "question": "How does useOptimistic improve perceived responsiveness, and what must happen if an Action fails?",
+        "answer": "useOptimistic can render a temporary state while an Action is pending, making the UI feel immediate. Keep the authoritative state update tied to the Action result and handle failure by restoring or reconciling the optimistic value with the actual state."
+      },
+      "vi": {
+        "question": "useOptimistic cải thiện cảm nhận phản hồi ra sao, và cần làm gì nếu Action thất bại?",
+        "answer": "useOptimistic có thể render state tạm thời trong lúc Action đang xử lý để UI phản hồi ngay. State chính thức vẫn phải gắn với kết quả Action; khi thất bại cần khôi phục hoặc đồng bộ lại giá trị optimistic với state thực tế."
+      }
+    }
+  },
+  {
+    "id": "react-015",
+    "topic": "React",
+    "difficulty": "Middle",
+    "tags": ["state", "batching"],
+    "translations": {
+      "en": {
+        "question": "Why can multiple state updates based on the previous value require a functional updater?",
+        "answer": "State values are snapshots for a render, so several updates that read the same captured value can overwrite one another. A functional updater receives the latest queued value, such as setCount(current => current + 1), which composes correctly with batching."
+      },
+      "vi": {
+        "question": "Vì sao nhiều state update dựa trên giá trị trước đó có thể cần functional updater?",
+        "answer": "State là snapshot của một lần render, nên nhiều update cùng đọc giá trị đã capture có thể ghi đè nhau. Functional updater nhận giá trị mới nhất trong hàng đợi, ví dụ setCount(current => current + 1), giúp các update kết hợp đúng khi batching."
+      }
+    }
+  },
+  {
+    "id": "react-016",
+    "topic": "React",
+    "difficulty": "Senior",
+    "tags": ["Server Components", "client components"],
+    "translations": {
+      "en": {
+        "question": "What are the trade-offs between React Server Components and Client Components?",
+        "answer": "Server Components can render using server-side data and avoid sending their component code to the browser, but cannot use client-only state or effects. Client Components support interaction and browser APIs but add client JavaScript. The framework and bundler must support the Server Component model."
+      },
+      "vi": {
+        "question": "Đánh đổi giữa React Server Components và Client Components là gì?",
+        "answer": "Server Components có thể render với dữ liệu phía server và không cần gửi code component đó xuống browser, nhưng không dùng được state/effect chỉ có ở client. Client Components hỗ trợ tương tác và browser API nhưng làm tăng JavaScript phía client. Framework và bundler cần hỗ trợ mô hình Server Components."
+      }
+    }
+  },
+  {
+    "id": "react-017",
+    "topic": "React",
+    "difficulty": "Fresher",
+    "tags": ["useRef", "DOM"],
+    "translations": {
+      "en": {
+        "question": "How would you use useRef to focus an input after a component mounts?",
+        "answer": "Create a ref with useRef, attach it to the input's ref prop, then call ref.current?.focus() from an effect. Updating or reading the DOM node through the ref does not itself trigger a React render."
+      },
+      "vi": {
+        "question": "Bạn dùng useRef để focus input sau khi component mount như thế nào?",
+        "answer": "Tạo ref bằng useRef, gắn nó vào prop ref của input, rồi gọi ref.current?.focus() trong effect. Đọc hoặc thao tác DOM node qua ref tự nó không làm React render lại."
+      }
+    }
+  },
+  {
+    "id": "react-018",
+    "topic": "React",
+    "difficulty": "Junior",
+    "tags": ["useRef", "mutable values"],
+    "translations": {
+      "en": {
+        "question": "When is useRef a better place than state to store a timer ID or another mutable value?",
+        "answer": "Use a ref when a value must persist across renders but changing it should not update the UI, such as a timer ID or an imperative instance. Use state when the value affects rendered output; changing ref.current does not schedule a render."
+      },
+      "vi": {
+        "question": "Khi nào nên dùng useRef thay vì state để lưu timer ID hoặc một giá trị mutable?",
+        "answer": "Dùng ref khi giá trị cần tồn tại qua các lần render nhưng thay đổi của nó không cần cập nhật UI, như timer ID hoặc một instance imperative. Dùng state khi giá trị ảnh hưởng nội dung render; đổi ref.current không lên lịch render."
+      }
+    }
+  },
+  {
+    "id": "react-019",
+    "topic": "React",
+    "difficulty": "Middle",
+    "tags": ["useRef", "rendering"],
+    "translations": {
+      "en": {
+        "question": "Why should ref.current generally not be read or changed during rendering?",
+        "answer": "Ref mutations are not reactive and do not cause React to render again, so reading or changing them during render can make output depend on hidden mutable state. Prefer reading or writing refs in event handlers and effects, except for predictable one-time initialization."
+      },
+      "vi": {
+        "question": "Vì sao thường không nên đọc hoặc đổi ref.current trong lúc render?",
+        "answer": "Thay đổi ref không có tính reactive và không khiến React render lại, nên đọc hoặc sửa ref trong lúc render có thể làm output phụ thuộc vào mutable state ẩn. Hãy thao tác ref trong event handler hoặc effect, ngoại trừ khởi tạo một lần có thể dự đoán."
+      }
+    }
+  },
+  {
+    "id": "react-020",
+    "topic": "React",
+    "difficulty": "Middle",
+    "tags": ["useEffect", "useLayoutEffect", "paint"],
+    "translations": {
+      "en": {
+        "question": "How do useEffect and useLayoutEffect differ, and when should you choose each?",
+        "answer": "Both run after React commits DOM changes. useEffect is intended for synchronization that usually does not need to block painting; useLayoutEffect runs synchronously before the browser paints and can measure or adjust layout without a visible flicker, but it blocks painting. Prefer useEffect unless the work must happen before paint."
+      },
+      "vi": {
+        "question": "useEffect và useLayoutEffect khác nhau thế nào, khi nào nên dùng từng loại?",
+        "answer": "Cả hai đều chạy sau khi React commit thay đổi DOM. useEffect dành cho việc đồng bộ thường không cần chặn browser paint; useLayoutEffect chạy đồng bộ trước khi browser paint, phù hợp đo hoặc chỉnh layout để tránh nhấp nháy nhưng sẽ chặn paint. Ưu tiên useEffect trừ khi công việc bắt buộc phải chạy trước paint."
+      }
+    }
+  },
+  {
+    "id": "react-021",
+    "topic": "React",
+    "difficulty": "Middle",
+    "tags": ["Hooks", "lifecycle", "effects"],
+    "translations": {
+      "en": {
+        "question": "How should class lifecycle logic be translated into Hooks, and why is it not always a one-to-one mapping?",
+        "answer": "Use state Hooks for local state and effects to synchronize with external systems. An effect's setup runs after commit, its cleanup runs before re-synchronizing when dependencies change and on unmount. Rather than copying didMount/didUpdate/didUnmount mechanically, group logic by the external synchronization it manages and declare its dependencies."
+      },
+      "vi": {
+        "question": "Nên chuyển logic lifecycle của class sang Hooks như thế nào và vì sao không phải lúc nào cũng ánh xạ một-một?",
+        "answer": "Dùng state Hook cho state cục bộ và effect để đồng bộ với hệ thống bên ngoài. Phần setup của effect chạy sau commit; cleanup chạy trước khi đồng bộ lại lúc dependency đổi và khi unmount. Thay vì máy móc ghép didMount/didUpdate/didUnmount, hãy nhóm logic theo tác vụ đồng bộ bên ngoài mà nó quản lý và khai báo dependency tương ứng."
+      }
+    }
+  },
+  {
+    "id": "react-022",
+    "topic": "React",
+    "difficulty": "Middle",
+    "tags": ["code splitting", "lazy loading", "Suspense"],
+    "translations": {
+      "en": {
+        "question": "What does React.lazy with Suspense optimize, and what does it not optimize?",
+        "answer": "React.lazy can split a component into a separate chunk that is downloaded when first rendered; Suspense shows a fallback while that chunk loads. This can reduce initial JavaScript download, parse, and execution cost, especially for rarely visited routes. It does not make the component render faster after loading or reduce its re-renders, and the total code is still downloaded if the user visits every split route."
+      },
+      "vi": {
+        "question": "React.lazy kết hợp Suspense tối ưu điều gì và không tối ưu điều gì?",
+        "answer": "React.lazy có thể tách component thành chunk riêng và chỉ tải khi component được render lần đầu; Suspense hiển thị fallback trong lúc chunk đang tải. Cách này giúp giảm JavaScript phải tải, parse và thực thi ban đầu, nhất là với route ít dùng. Nó không làm component render nhanh hơn sau khi tải hoặc giảm re-render; nếu người dùng mở mọi route thì tổng lượng code vẫn được tải."
+      }
+    }
+  }
+]
